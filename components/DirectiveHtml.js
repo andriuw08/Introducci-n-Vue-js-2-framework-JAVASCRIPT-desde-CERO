@@ -1,5 +1,5 @@
 // Crear componentes locales para utilizar adentro de los componentes, es decir, componentes hijos
-// v-tml sirve para que podamos renderizar etiquetas html de correcta manera, sino, las etiquetas aparecen como parte del texto 
+// v-html sirve para que podamos renderizar etiquetas html de correcta manera, sino, las etiquetas aparecen como parte del texto 
 let DirectiveHtml = {
     template: ` <div>
                     <h1 v-text="title"></h1>
