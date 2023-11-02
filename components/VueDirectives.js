@@ -13,6 +13,7 @@ Vue.component('vue-directives', {
                     <DirectiveOn></DirectiveOn>
                     <DirectiveModel></DirectiveModel>
                     <DirectiveSlot></DirectiveSlot>
+                    <DirectivePre></DirectivePre>
                 </div>`,
     data () {
         return {
@@ -32,6 +33,7 @@ Vue.component('vue-directives', {
         'DirectiveFor': DirectiveFor,
         'DirectiveOn': DirectiveOn,
         'DirectiveModel': DirectiveModel,
-        'DirectiveSlot': DirectiveSlot
+        'DirectiveSlot': DirectiveSlot,
+        'DirectivePre': DirectivePre
     }
 })
