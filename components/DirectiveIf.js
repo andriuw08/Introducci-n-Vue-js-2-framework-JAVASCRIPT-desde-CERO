@@ -8,7 +8,7 @@ let DirectiveIf = {
                 </div>`,
     data () {
         return {
-            title: 'Directiva v-html',
+            title: 'Directiva v-If',
             message: '<b>Hola desde directive if</b>',
             mostrar: true
         }
