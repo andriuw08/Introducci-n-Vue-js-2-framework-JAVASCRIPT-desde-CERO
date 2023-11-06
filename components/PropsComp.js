@@ -26,20 +26,23 @@ Vue.component('props-comp', {
                     title: 'Titanic',
                     synopsis: 'Durante las labores de recuperación de los restos del famoso trasatlántico Titanic, una anciana norteamericana se pone en contacto con la expedición para acudir…',
                     cover: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/zraTDtulFw2wrpyuYf646k95MNq.jpg',
-                    like: false
+                    like: false,
+                    message: 'Se ha agregado la pelicula Titanic a los favaritos'
                 },
                 {
                     id: 2,
                     title: 'El Rey León',
                     synopsis: 'Un remake del clásico animado de Disney de 1994 El rey león que estará dirigido por Jon Favreu. Simba (Donald Glover) es el hijo del rey de los leones, Mufasa…',
                     cover: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/3A8ca8WOBacCRujSKJ2tCVKsieQ.jpg',
-                    like: false
+                    like: false,
+                    message: 'Se ha agregado la pelicula El Rey León a los favaritos'
                 },
                 {
                     id: 3,
                     title: 'Toy Story',
                     cover: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/uMZqKhT4YA6mqo2yczoznv7IDmv.jpg',
-                    like: false
+                    like: false,
+                    message: 'Se ha agregado la pelicula Toy Story a los favaritos'
                 }
             ]
         }
@@ -51,6 +54,10 @@ Vue.component('props-comp', {
         onToggleLike(data) {
             let movieLike = this.movies.find(movie => movie.id == data.id)
             movieLike.like = data.like
+            if (!data.like) {
+                alert(`${movieLike.title} Se ha quitado de favoritos`)
+            }
+            alert(`${movieLike.message}`)
         }
     }
 })

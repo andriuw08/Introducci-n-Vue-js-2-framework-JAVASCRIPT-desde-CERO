@@ -36,11 +36,14 @@ let MovieComp = {
             default () {
                 return false
             }    
+        },
+        message: {
+            type: String,
+            required: true
         }
     },
     methods: {
         toggleLike () {
-            // this.like = !this.like
             let data = {
                 id: this.id,
                 like: !this.like
