@@ -5,6 +5,7 @@
 // $parent sirve para poder acceder desde nuestro componente hijo a nuestro componente padre sin pasar props
 // El | junto al filters funciona para crear filtros que formateen el texto 
 // Se pueden mandar varios filtros a la vez, solo es necesario colocar otro | y se iran ejecutando en el orden en el que los vayamos colcocando
+// Watch sirve para vigilar el cambio de una variable, el nombre de la funcion siempre tiene que tener el mismo nombre de la variable a revisar
 
 let MovieComp = {
     template: `
@@ -43,6 +44,11 @@ let MovieComp = {
         message: {
             type: String,
             required: true
+        }
+    },
+    watch: {
+        like (newVal, oldVal) {
+            console.log(newVal, oldVal)
         }
     },
     methods: {
