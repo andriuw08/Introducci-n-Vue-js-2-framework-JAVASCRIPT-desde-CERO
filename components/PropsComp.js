@@ -2,6 +2,7 @@
 // Si queremos enviar valores directos lo podemos bhacer sin bindear con los : 
 // Con el @ escuchamos el metodo que nos esta emitienod nuestro componente hijo
 // Con el data que le estamos mandando al onToggleLike le recibioms la data a nuestro componente hijo
+// ref es par apoder acceder a nuestro componente hijo mediante el componente padre, utilizando la referencia
 
 Vue.component('props-comp', {
     template: `

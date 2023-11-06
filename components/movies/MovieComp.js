@@ -2,6 +2,7 @@
 // Se pueden crear desde valores normales a objetos
 // Modificar la casa no es reconmedable desde el componente hijo, por lo que lo mejor es haccer un emit para emitir un evento al padre
 // El data es para poder enviar la data a nuestro componente padre, la data que falte
+// $parent sirve para poder acceder desde nuestro componente hijo a nuestro componente padre sin pasar props
 
 let MovieComp = {
     template: `
