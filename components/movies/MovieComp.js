@@ -3,12 +3,14 @@
 // Modificar la casa no es reconmedable desde el componente hijo, por lo que lo mejor es haccer un emit para emitir un evento al padre
 // El data es para poder enviar la data a nuestro componente padre, la data que falte
 // $parent sirve para poder acceder desde nuestro componente hijo a nuestro componente padre sin pasar props
+// El | junto al filters funciona para crear filtros que formateen el texto 
+// Se pueden mandar varios filtros a la vez, solo es necesario colocar otro | y se iran ejecutando en el orden en el que los vayamos colcocando
 
 let MovieComp = {
     template: `
-        <div>
+        <div :id="id | formatId">
             <img :src="cover">
-            <h2 v-text="title"></h2>
+            <h2 class="card-title">{{ title | uppercase }}</h2>
             <p v-text="synopsis"></p>
             <button @click="toggleLike" v-text="like ? 'Favorita' : 'Agregar a Favoritos'"></button>
             <hr>
@@ -50,6 +52,14 @@ let MovieComp = {
                 like: !this.like
             }
             this.$emit('toggleLike', data)
+        }
+    },
+    filters: {
+        formatId (value) {
+            return `movieCard-${value}`
+        },
+        uppercase (value) {
+            return value.toUpperCase()
         }
     }
 }
